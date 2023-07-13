@@ -14,25 +14,36 @@ struct ContentView: View {
     var body: some View {
         
 
-        
+   
+
+
         ZStack {
             
+
             Color(.systemPink)
                 .ignoresSafeArea()
             
+                
+            
             
             VStack (spacing: 20.0) {
+                
+                
                
                 Text("Kylie N")
-                
-        
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+     
+               
                 
                 Image("beach")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius (15)
             
-                
+
+                    
+                                    
                 Image("tech")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -42,18 +53,14 @@ struct ContentView: View {
                 
                 HStack {
                     Button("Facts About Me") {
-                        fact1 = "I am a rising senior and I like cats"
-                        
-
+                        fact1 = "I am a rising senior , I love taking photos, and I love theatre tech!"
                         
     
             }
-            .padding()
-            .background(Rectangle()
-                .foregroundColor(.white))
-            .cornerRadius(15)
-            .shadow(radius: 15)
-            .padding()
+                    .font(.title3)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.orange)
+            
             
             
             
@@ -61,12 +68,20 @@ struct ContentView: View {
                     
                 }
                 Text(fact1)
+                    .multilineTextAlignment(.center)
                 
                 
             }
             
 
         }
+        
+        .padding()
+        .background(Rectangle()
+            .foregroundColor(.white))
+        .cornerRadius(15)
+        .shadow(radius: 15)
+        .padding()
     }
     
     struct ContentView_Previews: PreviewProvider {
